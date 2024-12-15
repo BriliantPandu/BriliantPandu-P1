@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Bucin</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            color: #333;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #e63946;
+        }
+        section {
+            padding: 20px;
+        }
+        .quote {
+            font-size: 1.5em;
+            margin: 20px auto;
+            max-width: 600px;
+            color: #6d6875;
+        }
+        .message-form {
+            margin-top: 20px;
+        }
+        .message-form input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #e63946;
+            border-radius: 5px;
+            outline: none;
+        }
+        .message-form button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #e63946;
+            color: white;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .message-form button:hover {
+            background-color: #d90429;
+        }
+        footer {
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1></h1>
+        <p>WEB INI DI BUAT UNTUK MENGATASI BADMOOD NYA DESTI SUCI ROSITAWATI</p>
+    </header>
+    <section>
+        <p class="quote">"Wahai adindaku sayang, oh kakanda sangat menyesal telah melakukan kesalahan tersebut kakanda minta maaf sebesar-besarnya, adinda ku sayang plis ojo badmood"</p>
+        <div class="message-form">
+                        <input type="text" id="message" placeholder="Tulis pesanmu di sini...">
+            <button onclick="sendMessage()">Kirim</button>
+        </div>
+    </section>
+    <footer>
+        <p>di buat dengan cinta</p>
+    </footer>
+
+    <script>
+        function sendMessage() {
+            const message = document.getElementById('message').value;
+            if (message.trim() !== "") {
+                const phoneNumber = "6285926353362"; // Ganti dengan nomor tujuan (tanpa tanda +)
+                const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappURL, '_blank');
+            } else {
+                alert('Tulis pesan dulu ya!');
+            }
+        }
+    </script>
+</body>
+</html>
